@@ -35,33 +35,10 @@ include "../include/connexion_db.php";
 
     
     <input type="search" name="search" id="search" >
-    
-    <script>
-        if(document.readyState){
-           
-            $('#search').keydown(function (e) {
-                $.post("../ajax/search.php", {ma_variable : $("#search").val()}, function(data){
-                console.log(data + "ma_var")
-            })
-
-                $.ajax({
-                url : "../ajax/search.php",
-                method : 'POST',
-                async : true,
-                dataType : 'html',
-                success: function (data) {
-                    console.log(data);
-                },
-                error: function(data){
-                    console.error(data);
-                }
-                
-            })
-            })
+    <div id="result"></div>
+    <div id="test">
         
-    
-        
-        }
-    </script>
+    </div>
+    <script src="../ajax/js/search.js"></script>
 </body>
 </html>

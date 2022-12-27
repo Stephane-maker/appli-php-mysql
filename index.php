@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>php-my-sql</title>
+    <style>
+    .marging-top{
+        margin-top: 5%;
+    }
+    </style>
 </head>
 <body>
-    <p>Inscription Connexion</p>
 
-    <div class="d-flex aligns-items-center justify-content-center">
+    <div class="d-flex aligns-items-center justify-content-center marging-top">
     <div class="card w-25 d-flex">
     <div class="card-header">
     Foodly
@@ -21,7 +25,7 @@
     <div class="card-body ">
     <h5 class="card-title">Connexion, Inscription</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Connexion</a>
+    <a href="page/connexion.php" class="btn btn-primary">Connexion</a>
     <a href="page/inscription.php" class="btn btn-primary">Inscription</a>
     </div>
     </div>
