@@ -18,18 +18,11 @@ include "../include/variable.php";
         $recipesStatement->execute();
         $recipes = $recipesStatement->fetch();
 
-        if (password_verify($password, $recipes['passwor'])) {
+        if (password_verify($password, $recipes['password'])) {
             return true;
         }else{
             return false;
         }
     }
     
-    function aes_encode($text, $s_key, $iv){
-        return base64_encode(openssl_encrypt($text, "AES-128-CBC", $s_key, 0, $iv));
-    }
-    
-    function aes_decode($encrypt_text, $s_key, $iv){
-        return openssl_decrypt(base64_decode($encrypt_text), "AES-128-CBC", $s_key, 0, $iv);
-    }
 ?>

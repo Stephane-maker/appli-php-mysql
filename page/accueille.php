@@ -31,14 +31,19 @@ include "../include/connexion_db.php";
         <li><?php echo $items["name"] ?></li>
         <li><?php echo $items["last_name"] ?></li>
     </ul>
-    <?php endforeach ?>
-
+    <?php  endforeach;  ?>
+    <?php 
+    $idUser = $_GET["id"];
+    
+    ?>
     
     <input type="search" name="search" id="search" >
     <div id="result"></div>
-    <div id="test">
+    <div id="post">
         
     </div>
-    <script src="../ajax/js/search.js"></script>
+    
+    <script  src="../ajax/js/search.js"></script>
+    <script src="../ajax/js/post.js"></script>
 </body>
 </html>
