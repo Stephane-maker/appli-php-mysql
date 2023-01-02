@@ -1,0 +1,22 @@
+nav {
+  background-color: #f8f9fa;
+  box-shadow: 2px 2px 2px #6c757d;
+}
+nav * {
+  margin-bottom: 0.5% !important;
+  margin-top: 0.5% !important;
+}
+
+i {
+  font-size: 3rem;
+  padding: 0% 1% 0% 1% !important;
+  cursor: pointer;
+}
+
+.w-30 {
+  width: 30%;
+  display: flex;
+  text-align: center;
+}
+
+/*# sourceMappingURL=Style.css.map */

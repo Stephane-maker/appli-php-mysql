@@ -1,8 +1,4 @@
 
 <?php 
-$id;
-$emailUser;
-$name;
-$lastName;
-
+$key = "MY_SCRET_PASSWORD";
 ?>

@@ -27,22 +27,26 @@
 <button class="btn btn-primary" name="submit" type="submit" id="btnFunctionAjax">Button</button>
 </form>
     <?php 
+    $loader = require __DIR__ . '/../vendor/autoload.php';
+    $loader->addPsr4('Acme\\Test\\', __DIR__);
+    use \Firebase\JWT\JWT;
+
         if (isset($_POST["submit"])) {
             $email = $_POST["email"];
             $password = $_POST["password"];
             if(verifEmail($email, $db)){
                 if(passwordVerif($email,$db, $password )){
-                    session_start();
                     $sqlQuery = "SELECT * FROM user WHERE email = '$email'";
                     $recipesStatement = $db->prepare($sqlQuery);
                     $recipesStatement->execute();
                     $recipes = $recipesStatement->fetch();
-                    echo $recipes["id"];
-                    session_start();
-                    $_SESSION["id"] = $recipes["id"];
-                    
-                    
-                    header('Location: accueille.php?id='.$_SESSION["id"]);
+
+                    $key = 'MY_SCRET_PASSWORD';
+                    $payload = [
+                    'id' => $recipes["id"],
+                    ];
+                    $jwt = JWT::encode($payload, $key, 'HS256');
+                    header('Location: accueille.php?id='.$jwt);
                 }else{
                     echo "password error";
                 }

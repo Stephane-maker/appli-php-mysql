@@ -1,0 +1,29 @@
+// .d-flex {
+//     border: 1px solid black!important;
+//     width: 30%!important;
+// }
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+
+nav{
+    background-color: $gray-100;
+    box-shadow: 2px 2px 2px $gray-600;
+    & * {
+        margin-bottom: 0.5%!important;
+        margin-top: 0.5%!important;
+    }
+   
+}
+
+i {
+    font-size: 3rem;
+    padding: 0% 1% 0% 1% !important;
+    cursor: pointer;
+}
+.w-30 {
+    width: 30%;
+    display: flex;
+    text-align: center;
+}
+
